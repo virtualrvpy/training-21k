@@ -1,0 +1,636 @@
+/* plan.css & strava.css — combined */
+
+/* ============================
+   PLAN PAGE
+   ============================ */
+.plan-page, .strava-page { max-width: 1200px; margin: 0 auto; }
+
+.plan-header {
+  padding: 36px 32px 0;
+}
+
+.plan-hero {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 24px;
+}
+
+.plan-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(64px, 10vw, 108px);
+  line-height: 0.88;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.plan-hero-sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.stat-chip {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text2);
+}
+
+.stat-chip strong { color: var(--text); display: block; font-size: 14px; margin-top: 1px; }
+.stat-chip.accent { border-color: rgba(232,255,71,0.3); }
+.stat-chip.accent strong { color: var(--accent); }
+.stat-chip.target strong { color: var(--easy); }
+
+.plan-section {
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.plan-section:last-child { border-bottom: none; }
+
+/* Zones */
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.zone-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+
+.zn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.zv {
+  font-family: 'DM Mono', monospace;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.zd { font-size: 11px; color: var(--muted); }
+
+.zn.easy, .zv.easy { color: var(--easy); }
+.zn.mod,  .zv.mod  { color: var(--mod); }
+.zn.tempo,.zv.tempo{ color: var(--tempo); }
+.zn.interval,.zv.interval { color: var(--interval); }
+.zn.race, .zv.race { color: var(--accent); }
+
+.edit-zones-btn {
+  background: none;
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 0.15s;
+}
+.edit-zones-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Phase nav */
+.phase-nav-wrap {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.phase-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text2);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.16s;
+  letter-spacing: 0.3px;
+}
+
+.phase-btn:hover { border-color: var(--border2); color: var(--text); }
+.phase-btn.active { background: var(--accent-dim); border-color: rgba(232,255,71,0.3); color: var(--accent); }
+
+/* Week blocks */
+.week-list { display: flex; flex-direction: column; gap: 6px; }
+
+.week-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.18s;
+}
+.week-block:hover { border-color: var(--border2); }
+
+.week-hd {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--card);
+  cursor: pointer;
+  gap: 0;
+}
+
+.wk-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  color: var(--muted);
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.wk-num span {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.wk-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0 12px;
+}
+
+.wk-phase {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.ph-base   { background: var(--easy-dim);     color: var(--easy);     }
+.ph-build  { background: var(--tempo-dim);    color: var(--tempo);    }
+.ph-peak   { background: var(--interval-dim); color: var(--interval); }
+.ph-taper  { background: var(--long-dim);     color: var(--long);     }
+
+.wk-range {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text2);
+}
+
+.wk-km {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.wk-note {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.wk-toggle {
+  font-size: 20px;
+  color: var(--muted);
+  transition: transform 0.2s, color 0.2s;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.week-block.open .wk-toggle { transform: rotate(45deg); color: var(--accent); }
+.week-block.open { border-color: var(--border2); }
+
+.week-sessions {
+  display: none;
+  border-top: 1px solid var(--border);
+}
+
+.week-block.open .week-sessions { display: block; }
+
+/* Sessions */
+.session-row {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  border-bottom: 1px solid var(--border);
+}
+.session-row:last-child { border-bottom: none; }
+
+.sess-day {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+}
+
+.sess-day span {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.sess-day small {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  opacity: 0.75;
+}
+
+.sess-body { padding: 14px 16px; }
+
+.sess-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sess-label::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.t-easy     .sess-label, .sess-label.t-easy     { color: var(--easy);     }
+.t-easy     .sess-label::before                  { background: var(--easy); }
+.t-tempo    .sess-label, .sess-label.t-tempo    { color: var(--tempo);    }
+.t-tempo    .sess-label::before                  { background: var(--tempo); }
+.t-interval .sess-label, .sess-label.t-interval { color: var(--interval); }
+.t-interval .sess-label::before                  { background: var(--interval); }
+.t-long     .sess-label, .sess-label.t-long     { color: var(--long);     }
+.t-long     .sess-label::before                  { background: var(--long); }
+.t-strength .sess-label, .sess-label.t-strength { color: var(--strength); }
+.t-strength .sess-label::before                  { background: var(--strength); }
+.t-rest     .sess-label, .sess-label.t-rest     { color: var(--muted);    }
+.t-rest     .sess-label::before                  { background: #374151; }
+.t-race     .sess-label, .sess-label.t-race     { color: var(--accent);   }
+.t-race     .sess-label::before                  { background: var(--accent); }
+
+.sess-desc {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 3px;
+}
+
+.sess-detail {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Pace tags (inline in desc/detail) */
+.pace-tag {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+  line-height: 1.4;
+}
+
+.pace-tag.easy     { color: var(--easy);     background: var(--easy-dim);     }
+.pace-tag.mod      { color: var(--mod);      background: rgba(134,239,172,0.1);}
+.pace-tag.tempo    { color: var(--tempo);    background: var(--tempo-dim);    }
+.pace-tag.interval { color: var(--interval); background: var(--interval-dim); }
+.pace-tag.race     { color: var(--accent);   background: var(--accent-dim);   }
+
+/* ============================
+   STRAVA PAGE
+   ============================ */
+.strava-main { padding: 0; }
+
+.strava-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 32px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--border2);
+  border-top-color: var(--strava);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Setup */
+.strava-setup {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.setup-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.setup-icon { font-size: 36px; margin-bottom: 16px; }
+
+.setup-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: var(--text);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.setup-card p {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.setup-steps {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.setup-steps li {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.setup-steps a { color: var(--strava); text-decoration: none; }
+.setup-steps a:hover { text-decoration: underline; }
+.setup-steps strong { color: var(--text); }
+
+.setup-form { display: flex; flex-direction: column; gap: 14px; }
+
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+
+.form-field label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.form-field input {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: var(--text);
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  transition: border-color 0.15s;
+}
+.form-field input:focus { outline: none; border-color: var(--strava); }
+
+.btn-strava {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background: var(--strava);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  margin-top: 8px;
+}
+.btn-strava:hover { opacity: 0.88; }
+
+/* Weekly Strava rows */
+.week-strava-list { display: flex; flex-direction: column; gap: 4px; }
+
+.sw-row {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.sw-row.sw-current { border-color: rgba(232,255,71,0.3); }
+
+.sw-hd {
+  display: grid;
+  grid-template-columns: 40px 130px auto 1fr 120px 28px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: var(--card);
+  cursor: pointer;
+}
+
+.sw-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+.sw-range {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text2);
+}
+
+.sw-status {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.sw-status.done    { background: var(--easy-dim);     color: var(--easy);     }
+.sw-status.partial { background: var(--tempo-dim);    color: var(--tempo);    }
+.sw-status.missed  { background: rgba(55,65,81,0.4);  color: var(--muted);    }
+.sw-status.current { background: var(--accent-dim);   color: var(--accent);   }
+.sw-status.future  { color: var(--muted); }
+
+.sw-bar-wrap {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sw-bar {
+  height: 100%;
+  background: var(--easy);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.sw-km {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text2);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.sw-toggle {
+  font-size: 16px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.sw-sessions {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.sw-empty {
+  padding: 16px 20px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.sw-footer {
+  padding: 10px 20px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+.sw-footer strong { color: var(--text); }
+
+/* Activity rows */
+.act-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+}
+.act-row:last-of-type { border-bottom: none; }
+
+.act-info { flex: 1; min-width: 0; }
+
+.act-name {
+  font-size: 13px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.act-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.act-stats {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.act-km, .act-pace, .act-time, .act-hr {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+}
+
+.act-km    { color: var(--easy);    }
+.act-pace  { color: var(--accent);  }
+.act-time  { color: var(--text2);   }
+.act-hr    { color: var(--interval);}
+
+/* Strava settings row */
+.strava-settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.refresh-btn {
+  background: none;
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 0.15s;
+}
+.refresh-btn:hover { border-color: var(--easy); color: var(--easy); }
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 768px) {
+  .plan-section { padding: 20px 16px; }
+  .plan-header { padding: 24px 16px 0; }
+  .sw-hd { grid-template-columns: 36px 1fr auto 28px; gap: 8px; }
+  .sw-range, .sw-bar-wrap, .sw-km { display: none; }
+  .session-row { grid-template-columns: 66px 1fr; }
+  .wk-meta { gap: 6px; }
+  .wk-range { display: none; }
+  .strava-main > .plan-section { padding: 16px; }
+  .act-stats { gap: 8px; }
+  .act-hr { display: none; }
+}

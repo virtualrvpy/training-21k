@@ -61,4 +61,8 @@ async function init() {
   renderPlanApp();
 }
 
+case 'coach': renderCoachApp(); break;
+
 document.addEventListener('DOMContentLoaded', init);
+
+

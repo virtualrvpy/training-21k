@@ -1,0 +1,180 @@
+/* ============================================
+   COACH.CSS — Estilos del módulo Coach IA
+   Agregar al final de css/plan.css
+   ============================================ */
+
+/* ── Página coach ── */
+.coach-page { padding: 0 0 60px; }
+
+/* ── Setup ── */
+.coach-setup { padding: 20px 16px; }
+.btn-coach {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; padding: 14px;
+  background: var(--accent, #fc4c02); color: #fff;
+  border: none; border-radius: 8px;
+  font-size: 15px; font-weight: 700; cursor: pointer;
+  margin-top: 16px; letter-spacing: .3px;
+}
+.btn-coach:active { opacity: .85; }
+.btn-coach-sm {
+  padding: 10px 16px;
+  background: var(--accent, #fc4c02); color: #fff;
+  border: none; border-radius: 6px;
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  white-space: nowrap; flex-shrink: 0;
+}
+.btn-coach-sm:active { opacity: .85; }
+
+/* ── Loader ── */
+.coach-analyzing {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; padding: 60px 20px; gap: 20px;
+}
+.analyzing-ring {
+  width: 52px; height: 52px;
+  border: 4px solid var(--border, #2a2a2a);
+  border-top-color: var(--accent, #fc4c02);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.analyzing-msg { font-size: 14px; color: var(--text2); }
+
+.analyzing-inline {
+  display: flex; align-items: center; gap: 8px;
+  margin-top: 10px; font-size: 13px; color: var(--text2);
+}
+.mini-spinner {
+  width: 16px; height: 16px;
+  border: 2px solid var(--border, #2a2a2a);
+  border-top-color: var(--accent, #fc4c02);
+  border-radius: 50%;
+  animation: spin 1s linear infinite; flex-shrink: 0;
+}
+
+/* ── Empty ── */
+.coach-empty {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 60px 20px; text-align: center;
+}
+.empty-icon { font-size: 48px; margin-bottom: 16px; }
+
+/* ── Content ── */
+.coach-content { padding: 0 16px; }
+
+/* ── Selector ── */
+.selector-row { display: flex; gap: 10px; align-items: center; margin-top: 8px; }
+.activity-select {
+  flex: 1; min-width: 0;
+  padding: 10px 12px;
+  background: var(--surface2, #1a1a1a);
+  color: var(--text1, #f0f0f0);
+  border: 1px solid var(--border, #2a2a2a);
+  border-radius: 6px; font-size: 13px;
+}
+
+/* ── Status badge ── */
+.status-badge {
+  display: inline-block; padding: 10px 16px;
+  border-radius: 8px; font-size: 15px; font-weight: 700;
+  margin-bottom: 8px; width: 100%; box-sizing: border-box;
+}
+.status-ok     { background: rgba(34,197,94,.15); color: #4ade80; border: 1px solid rgba(34,197,94,.3); }
+.status-warn   { background: rgba(251,191,36,.15); color: #fbbf24; border: 1px solid rgba(251,191,36,.3); }
+.status-alert  { background: rgba(239,68,68,.15);  color: #f87171; border: 1px solid rgba(239,68,68,.3); }
+
+/* ── Fatiga ── */
+.coach-fatiga {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 0; font-size: 13px; color: var(--text2);
+}
+.fatiga-badge {
+  padding: 3px 8px; border-radius: 4px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+}
+.nivel-leve     { background: rgba(251,191,36,.2); color: #fbbf24; }
+.nivel-moderada { background: rgba(251,146,60,.2); color: #fb923c; }
+.nivel-alta     { background: rgba(239,68,68,.2);  color: #f87171; }
+
+/* ── Textos del coach ── */
+.coach-text {
+  font-size: 14px; line-height: 1.65;
+  color: var(--text1, #f0f0f0); margin: 8px 0 0;
+}
+.coach-text.proxima {
+  color: var(--accent, #fc4c02);
+  font-weight: 600;
+}
+.coach-detalles {
+  margin: 12px 0 0; padding-left: 18px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.coach-detalles li { font-size: 13px; color: var(--text2); line-height: 1.5; }
+
+/* ── Ajustes de ritmo ── */
+.coach-ajustes {
+  background: var(--surface2, #1a1a1a);
+  border: 1px solid var(--border, #2a2a2a);
+  border-left: 3px solid var(--accent, #fc4c02);
+  border-radius: 8px; padding: 14px; margin: 0 0 12px;
+}
+.ajustes-title { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+.ajustes-reason { font-size: 12px; color: var(--text2); margin-bottom: 10px; }
+.ajustes-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 8px; margin-bottom: 12px;
+}
+.ajuste-item {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 8px; background: var(--surface, #111);
+  border-radius: 6px; gap: 2px;
+}
+.ajuste-item span { font-size: 10px; color: var(--text2); text-transform: uppercase; }
+.ajuste-item strong { font-size: 14px; color: var(--accent, #fc4c02); }
+.btn-apply-paces {
+  width: 100%; padding: 10px;
+  background: transparent;
+  border: 1px solid var(--accent, #fc4c02);
+  color: var(--accent, #fc4c02);
+  border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer;
+}
+.btn-apply-paces:active { background: rgba(252,76,2,.1); }
+
+/* ── Splits ── */
+.splits-table { margin-top: 12px; border-radius: 6px; overflow: hidden; }
+.splits-header {
+  display: grid; grid-template-columns: 48px 1fr 1fr;
+  padding: 6px 10px; background: var(--surface2, #1a1a1a);
+  font-size: 11px; font-weight: 700; color: var(--text2);
+  text-transform: uppercase; letter-spacing: .5px;
+}
+.split-row {
+  display: grid; grid-template-columns: 48px 1fr 1fr;
+  padding: 7px 10px;
+  border-top: 1px solid var(--border, #2a2a2a);
+  font-size: 13px;
+}
+.split-km { color: var(--text2); }
+.split-pace { font-weight: 600; }
+.split-hr { color: var(--text2); }
+
+/* ── Session data ── */
+.session-name {
+  font-size: 11px; color: var(--text2);
+  font-weight: 400; margin-left: 8px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  max-width: 180px; display: inline-block; vertical-align: middle;
+}
+
+/* ── Plan context ── */
+.ctx-row {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; margin: 8px 0 6px;
+}
+.ctx-planned {
+  font-size: 12px; color: var(--text2);
+  padding: 8px 10px; background: var(--surface2, #1a1a1a);
+  border-radius: 6px; line-height: 1.5;
+}
+.ctx-planned strong { color: var(--text1, #f0f0f0); }

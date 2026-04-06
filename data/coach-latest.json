@@ -74,14 +74,15 @@
   "analysis": {
     "cumplimiento": "ok",
     "emoji": "✅",
-    "titulo": "Gran esfuerzo en el calor, Rodrigo",
-    "resumen": "Rodrigo mantuvo un ritmo moderado muy cercano al objetivo, demostrando una excelente consistencia a pesar del calor extremo. La deriva de FC sugiere un esfuerzo elevado, pero el cumplimiento del ritmo fue notable.",
+    "titulo": "Moderado en el calor: ¡Bien hecho!",
+    "resumen": "Rodrigo, ¡excelente laburo! Mantuviste un ritmo moderado muy consistente y casi clavado al objetivo, a pesar de las condiciones de calor extremo. La FC promedio estuvo en zona, pero el drift indica que tu cuerpo laburó a full.",
     "detalles": [
-      "El ritmo promedio de 6:03/km estuvo muy cerca del objetivo de 6:00/km para una sesión moderada, mostrando un buen control del ritmo.",
-      "La deriva de FC de +12 bpm es significativa y un claro indicador del estrés térmico debido a las altas temperaturas y humedad. Esto sugiere que el esfuerzo fue elevado para mantener el ritmo.",
-      "Los splits fueron muy consistentes, con la mayoría de los kilómetros entre 6:01/km y 6:06/km, lo que demuestra una excelente capacidad de pacing.",
-      "Considerando la penalización por calor (15-30s/km), mantener un ritmo de 6:03/km fue un esfuerzo considerablemente más alto que un 'moderado' en condiciones frescas. Esto es clave para interpretar la sesión.",
-      "La carga acumulada del historial reciente (8k Easy dos días antes) no parece haber sido un factor de fatiga excesiva para esta sesión."
+      "El ritmo promedio de 6:03/km estuvo prácticamente en el objetivo de 6:00/km para una sesión moderada, lo cual es un gran logro en estas condiciones.",
+      "Tu frecuencia cardíaca promedio de 156 bpm se mantuvo dentro de la zona moderada (75-84% de tu FC Max estimada), lo que es correcto para este tipo de sesión.",
+      "El drift de FC de +12 bpm es un indicador claro del estrés por calor y humedad. Esto significa que, aunque el ritmo fue moderado, el esfuerzo fisiológico fue más elevado de lo que sería en condiciones ideales.",
+      "Los splits por kilómetro fueron muy consistentes, demostrando un excelente control del ritmo y una buena gestión del esfuerzo a lo largo de los 8km.",
+      "Considerando el calor extremo de Asunción (30-38C), mantener este ritmo implicó un esfuerzo equivalente a un ritmo más rápido en condiciones frescas. ¡Bien manejado!",
+      "La carga acumulada previa a esta sesión fue adecuada, sin indicios de fatiga excesiva de entrenamientos anteriores."
     ],
     "ajustes_ritmos": {
       "aplicar": false,
@@ -94,13 +95,15 @@
         "race": null
       }
     },
-    "proxima_sesion": "Continuá con el plan de base. Para las próximas sesiones, especialmente en días de calor extremo, recordá que el ritmo debe ajustarse al esfuerzo percibido. Si la sesión es fácil, priorizá mantener la FC baja, aunque el ritmo sea más lento de lo pautado.",
+    "proxima_sesion": "Para las próximas sesiones, seguí escuchando a tu cuerpo. En días de mucho calor, no dudes en bajar un poco el ritmo si sentís que la FC se dispara demasiado, priorizando el esfuerzo sobre el pace. ¡A seguir así!",
     "fatiga": {
-      "detectada": false,
-      "nivel": null,
-      "senales": null
+      "detectada": true,
+      "nivel": "leve",
+      "senales": [
+        "Drift de FC elevado por estrés térmico"
+      ]
     },
-    "generado_en": "2026-04-06T15:43:31.062Z"
+    "generado_en": "2026-04-06T15:47:46.166Z"
   },
   "recent_history": [
     {
@@ -143,5 +146,5 @@
     "totalWeeks": 22,
     "vdot": "42–43"
   },
-  "fetched_at": "2026-04-06T15:43:31.062Z"
+  "fetched_at": "2026-04-06T15:47:46.166Z"
 }

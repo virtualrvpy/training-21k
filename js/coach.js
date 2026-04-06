@@ -71,7 +71,8 @@ async function triggerCoachWorkflow(activityId) {
     intermediateRace: '5 julio 2026',
     plannedSession: planned,
     paces: loadPaces(), // de paces.js
-    vdot: getPacesState()?.vdot || '42–43',
+vdot: localStorage.getItem('vdot') || '42–43',
+
   };
 
   const payload = {

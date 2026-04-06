@@ -4,6 +4,7 @@
 
 let currentTab = 'plan';
 let stravaInitialized = false;
+let coachInitialized = false;
 
 function switchTab(tab, btn) {
   currentTab = tab;
@@ -15,6 +16,11 @@ function switchTab(tab, btn) {
   if (tab === 'strava' && !stravaInitialized) {
     stravaInitialized = true;
     renderStravaApp();
+  }
+
+  if (tab === 'coach' && !coachInitialized) {
+    coachInitialized = true;
+    renderCoachApp();
   }
 }
 
@@ -48,7 +54,6 @@ function showToast(msg, type = '') {
 
 // ---- INIT ----
 async function init() {
-  // Check for Strava OAuth callback
   const params = new URLSearchParams(window.location.search);
   if (params.get('code') && params.get('scope')) {
     switchTab('strava', document.querySelectorAll('.tab-btn')[1]);
@@ -57,12 +62,7 @@ async function init() {
     return;
   }
 
-  // Render plan
   renderPlanApp();
 }
 
-case 'coach': renderCoachApp(); break;
-
 document.addEventListener('DOMContentLoaded', init);
-
-

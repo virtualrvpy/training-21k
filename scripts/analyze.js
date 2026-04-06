@@ -193,25 +193,8 @@ async function callGemini(prompt) {
     body: JSON.stringify({
       contents: [{ parts: [{ text: prompt }] }],
       generationConfig: {
-  temperature: 0.2,
-  maxOutputTokens: 2500,
-  responseMimeType: 'application/json',
-  responseSchema: {
-    type: "OBJECT",
-    properties: {
-      cumplimiento: { type: "STRING" },
-      emoji: { type: "STRING" },
-      titulo: { type: "STRING" },
-      resumen: { type: "STRING" },
-      detalles: { type: "ARRAY", items: { type: "STRING" } },
-      ajustes_ritmos: { type: "OBJECT" },
-      proxima_sesion: { type: "STRING" },
-      fatiga: { type: "OBJECT" },
-      generado_en: { type: "STRING" }
-    }
-  }
-}
-
+        temperature: 0.2,
+        maxOutputTokens: 2500,
       },
     }),
   });

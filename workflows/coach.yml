@@ -21,7 +21,7 @@ jobs:
 
       - name: Run analysis
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEM_API_KEY: ${{ secrets.GEM_API_KEY }}
           STRAVA_ACCESS_TOKEN: ${{ github.event.client_payload.access_token }}
           STRAVA_ACTIVITY_ID: ${{ github.event.client_payload.activity_id }}
           PLAN_CONTEXT: ${{ toJson(github.event.client_payload.plan_context) }}

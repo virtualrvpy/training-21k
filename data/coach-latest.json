@@ -1,5 +1,168 @@
 {
-  "_empty": true,
-  "_note": "Este archivo se sobreescribe automáticamente por GitHub Actions después de cada análisis.",
-  "fetched_at": "2026-01-01T00:00:00.000Z"
+  "activity": {
+    "id": 17993137197,
+    "name": "Fondo 12k con cuestas",
+    "date": "2026-04-05T19:13:16Z",
+    "distance_km": 12.01,
+    "duration": "1h 18m 25s",
+    "moving_time": "1h 18m 11s",
+    "avg_pace": "6:31",
+    "max_pace": "4:23",
+    "avg_hr": 159,
+    "max_hr": 181,
+    "hr_drift_bpm": 14,
+    "avg_cadence": 166,
+    "elevation_gain": 184,
+    "suffer_score": 121,
+    "splits": [
+      {
+        "km": 1,
+        "pace": "6:25",
+        "hr": 139,
+        "elevation": -11
+      },
+      {
+        "km": 2,
+        "pace": "6:32",
+        "hr": 150,
+        "elevation": -5
+      },
+      {
+        "km": 3,
+        "pace": "6:37",
+        "hr": 155,
+        "elevation": 4
+      },
+      {
+        "km": 4,
+        "pace": "6:34",
+        "hr": 157,
+        "elevation": 9
+      },
+      {
+        "km": 5,
+        "pace": "6:35",
+        "hr": 158,
+        "elevation": -8
+      },
+      {
+        "km": 6,
+        "pace": "6:47",
+        "hr": 159,
+        "elevation": -3
+      },
+      {
+        "km": 7,
+        "pace": "6:25",
+        "hr": 163,
+        "elevation": -5
+      },
+      {
+        "km": 8,
+        "pace": "6:47",
+        "hr": 163,
+        "elevation": 4
+      },
+      {
+        "km": 9,
+        "pace": "6:29",
+        "hr": 164,
+        "elevation": 12
+      },
+      {
+        "km": 10,
+        "pace": "6:22",
+        "hr": 165,
+        "elevation": -12
+      },
+      {
+        "km": 11,
+        "pace": "6:28",
+        "hr": 166,
+        "elevation": -6
+      },
+      {
+        "km": 12,
+        "pace": "6:10",
+        "hr": 173,
+        "elevation": 17
+      },
+      {
+        "km": 13,
+        "pace": "7:56",
+        "hr": 172,
+        "elevation": null
+      }
+    ]
+  },
+  "analysis": {
+    "cumplimiento": "revision_necesaria",
+    "emoji": "🔴",
+    "titulo": "Fondo con esfuerzo excesivo",
+    "resumen": "Rodrigo, tu fondo de 12km fue más exigente de lo planeado para una sesión Fácil. El ritmo promedio fue un poco rápido y tu frecuencia cardíaca estuvo consistentemente alta, con un drift significativo, indicando un esfuerzo mayor al deseado, agravado por el calor y las cuestas.",
+    "detalles": [
+      "El ritmo promedio de 6:31/km fue ligeramente más rápido que tu zona Fácil (6:35/km), pero lo más preocupante es que tu FC promedio de 159 bpm y máxima de 181 bpm están por encima de lo que consideramos un esfuerzo Fácil (que debería estar entre 127-155 bpm para tu VDOT y FC Max estimada).",
+      "El drift de FC de +14 bpm es un indicador claro de estrés por calor y/o un esfuerzo sostenido demasiado alto. En Asunción, con temperaturas extremas, es fundamental ajustar el ritmo por sensación y FC, no solo por pace.",
+      "La inclusión de 'cuestas' y el desnivel de +184m, sumado al fuerte final en el km 12 (6:10/km a 173bpm), transformaron una sesión Fácil en una de esfuerzo Moderado a Intenso en algunos tramos. Esto no es lo ideal para una fase de base.",
+      "Considerando la penalización por calor (15-30s/km en días >32C), tu ritmo efectivo de fácil debería haber sido más cercano a 6:50-7:05/km. Correr a 6:31/km en estas condiciones significa que el esfuerzo real fue mucho mayor que un 'fácil'."
+    ],
+    "ajustes_ritmos": {
+      "aplicar": false,
+      "razon": "Los ritmos actuales son correctos para tu VDOT, pero la ejecución debe considerar el factor calor y el tipo de sesión. No es necesario ajustar los números, sino la percepción del esfuerzo y la disciplina en la zona.",
+      "nuevos_paces": null
+    },
+    "proxima_sesion": "Para tu próxima sesión (miércoles), enfocá un 8k Fácil estricto. Priorizá la FC y la sensación de 'conversacional'. Si el calor es intenso, aceptá un ritmo más lento (7:00-7:15/km) para mantener la FC en zona Fácil (aprox. 130-155 bpm). No busques el pace objetivo si el esfuerzo es alto.",
+    "fatiga": {
+      "detectada": true,
+      "nivel": "moderada",
+      "senales": [
+        "FC promedio y máxima elevadas para un Easy",
+        "Drift de FC significativo (+14 bpm)",
+        "Final de carrera con esfuerzo intenso (km 12 a 173bpm)"
+      ]
+    },
+    "generado_en": "2026-04-06T15:40:17.139Z"
+  },
+  "recent_history": [
+    {
+      "date": "2026-03-31",
+      "km": 8.01,
+      "pace": "6:30",
+      "hr": 149,
+      "name": "8k Easy"
+    },
+    {
+      "date": "2026-04-03",
+      "km": 8.01,
+      "pace": "6:03",
+      "hr": 156,
+      "name": "8k moderado"
+    }
+  ],
+  "plan_context": {
+    "currentPhase": "base",
+    "currentWeek": 1,
+    "intermediateRace": "5 julio 2026",
+    "paces": {
+      "easy": "6:35",
+      "interval": "4:50",
+      "mod": "6:00",
+      "race": "5:40",
+      "tempo": "5:15"
+    },
+    "plannedSession": {
+      "day": "Dom",
+      "desc": "12km largo [E]",
+      "detail": "Ritmo conversacional · hidratación c/4km",
+      "label": "Largo",
+      "phase": "base",
+      "type": "long",
+      "weekNote": "Construcción aeróbica",
+      "weekNum": 1
+    },
+    "raceDate": "30 agosto 2026",
+    "totalWeeks": 22,
+    "vdot": "42–43"
+  },
+  "fetched_at": "2026-04-06T15:40:17.139Z"
 }

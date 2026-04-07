@@ -245,7 +245,8 @@ async function main() {
   ]);
 
   const session = parseActivity(activityRaw);
-  const recentHistory = summarizeRecent(recentRaw, STRAVA_ACTIVITY_ID);
+  // Ensure per-training analysis: do not compare with previous analyses
+  const recentHistory = [];
 
   console.log(`Actividad: "${session.name}" - ${session.distance_km}km a ${session.avg_pace}/km`);
 

@@ -136,21 +136,7 @@ async function pollCoachResult(expectedAfter, onProgress, maxWaitMs = 60000) {
     setTimeout(check, 5000);
   });
 }
-      try {
-        const res = await fetch(`${RAW_URL}?t=${Date.now()}`);
-        if (!res.ok) { setTimeout(check, interval); return; }
-        const data = await res.json();
-        // If the workflow reports an error, fail fast
-        if (data._error) {
-          reject(new Error(data.message || 'Error durante el análisis en el servidor'));
-          return;
-        }
-        if (new Date(data.fetched_at).getTime() > expectedAfter) {
-          resolve(data);
-        } else {
-          setTimeout(check, interval);
-        }
-      } catch { setTimeout(check, interval); }
+      // stray block removed
     };
     setTimeout(check, 5000);
   });

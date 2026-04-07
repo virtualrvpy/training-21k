@@ -105,7 +105,7 @@ async function triggerCoachWorkflow(activityId) {
 
 // ── Polling ───────────────────────────────────────────────────────────────────
 
-async function pollCoachResult(expectedAfter, onProgress, maxWaitMs = 600000) {
+async function pollCoachResult(expectedAfter, onProgress, maxWaitMs = 60000) {
   const RAW_URL = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/data/coach-latest.json`;
   const interval = 4000;
   const start = Date.now();
@@ -140,6 +140,11 @@ async function pollCoachResult(expectedAfter, onProgress, maxWaitMs = 600000) {
         const res = await fetch(`${RAW_URL}?t=${Date.now()}`);
         if (!res.ok) { setTimeout(check, interval); return; }
         const data = await res.json();
+        // If the workflow reports an error, fail fast
+        if (data._error) {
+          reject(new Error(data.message || 'Error durante el análisis en el servidor'));
+          return;
+        }
         if (new Date(data.fetched_at).getTime() > expectedAfter) {
           resolve(data);
         } else {
@@ -190,7 +195,7 @@ async function renderCoachApp() {
 // ── Setup ─────────────────────────────────────────────────────────────────────
 
 function renderCoachSetup(app) {
-  app.innerHTML = `
+        app.innerHTML = `
     <div class="coach-page">
       <div class="page-header">
         <h2>COACH IA</h2>
@@ -247,29 +252,32 @@ function renderCoachEmpty(app) {
   const activities = ACTIVITIES_CACHE.data || [];
   const latestRun = activities[0];
 
-  app.innerHTML = `
-    <div class="coach-page">
-      <div class="page-header">
-        <h2>COACH IA</h2>
-        <p>Analizá tu última sesión para empezar</p>
-      </div>
-      <div class="plan-section">
-        <div class="section-label">Analizar sesi\u00f3n</div>
-        ${latestRun ? `
-          <div class="empty-run-card">
-            <div class="empty-run-info">
-              <strong>${latestRun.name}</strong>
-              <span>${(latestRun.distance/1000).toFixed(1)}km \u00b7 ${new Date(latestRun.start_date_local).toLocaleDateString('es-PY',{day:'numeric',month:'short'})}</span>
+    app.innerHTML = `
+      <div class="coach-page">
+        <div class="page-header">
+          <h2>COACH IA</h2>
+          <p>Analizá tu última sesión para empezar</p>
+        </div>
+        <div class="plan-section">
+          <div class="section-label">Analizar sesi\u00f3n</div>
+          ${latestRun ? `
+            <div class="empty-run-card">
+              <div class="empty-run-info">
+                <strong>${latestRun.name}</strong>
+                <span>${(latestRun.distance/1000).toFixed(1)}km \u00b7 ${new Date(latestRun.start_date_local).toLocaleDateString('es-PY',{day:'numeric',month:'short'})}</span>
+              </div>
+              <button class="btn-coach-sm" onclick="startAnalysis('${latestRun.id}')">Analizar \u25ba</button>
             </div>
-            <button class="btn-coach-sm" onclick="startAnalysis('${latestRun.id}')">Analizar \u25ba</button>
+          ` : `<p style="color:var(--text2);font-size:13px;padding:12px 0">Prim\u00e9ro conect\u00e1 Strava.</p>`}
+          <div style="margin-top:8px;text-align:center">
+            <button class="btn-secondary" onclick="location.reload()">Reintentar</button>
           </div>
-        ` : `<p style="color:var(--text2);font-size:13px;padding:12px 0">Prim\u00e9ro conect\u00e1 Strava.</p>`}
+        </div>
+        <div class="plan-section" style="text-align:right">
+          <button class="btn-secondary" onclick="resetCoachConfig()">Cambiar GitHub Token</button>
+        </div>
       </div>
-      <div class="plan-section" style="text-align:right">
-        <button class="btn-secondary" onclick="resetCoachConfig()">Cambiar GitHub Token</button>
-      </div>
-    </div>
-  `;
+    `;
 }
 
 function renderNextSessionCard(next) {

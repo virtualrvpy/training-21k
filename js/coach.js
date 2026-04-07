@@ -157,7 +157,7 @@ async function loadLatestCoachResult() {
     const res = await fetch(`${RAW_URL}?t=${Date.now()}`);
     if (!res.ok) return null;
     const data = await res.json();
-    if (data._empty) return null;
+    if (data._empty || data._error) return null;
     return data;
   } catch { return null; }
 }

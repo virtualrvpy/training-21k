@@ -180,6 +180,47 @@ const TYPE_LABELS = {
 let activePhaseFilter = 'all';
 let openWeeks = new Set();
 
+function getWeekIndex(date) {
+  const start = new Date(2026, 2, 31);
+  const diff = date - start;
+  return Math.floor(diff / (7 * 24 * 60 * 60 * 1000));
+}
+
+function getNextPlannedSession() {
+  const now = new Date();
+  const dayMap = { 'Mar': 2, 'Mie': 3, 'Vie': 5, 'Dom': 0 };
+  const trainingDays = [0, 2, 3, 5];
+
+  for (let i = 0; i <= 14; i++) {
+    const d = new Date(now);
+    d.setDate(d.getDate() + i);
+    const dow = d.getDay();
+    if (!trainingDays.includes(dow)) continue;
+
+    const wi = getWeekIndex(d);
+    if (wi < 0 || wi >= PLAN.length) continue;
+
+    const week = PLAN[wi];
+    const session = week.sessions.find(s => {
+      const n = s.day === 'Mar' ? 2 : s.day === 'Mi\u00e9' ? 3 : s.day === 'Vie' ? 5 : s.day === 'Dom' ? 0 : -1;
+      return n === dow;
+    });
+    if (!session) continue;
+    if (i === 0 && now.getHours() >= 20) continue;
+
+    return {
+      ...session,
+      weekNum: week.w,
+      phase: week.phase,
+      date: d,
+      dateStr: d.toLocaleDateString('es-PY', { weekday: 'long', day: 'numeric', month: 'short' }),
+      isToday: i === 0,
+      isTomorrow: i === 1,
+    };
+  }
+  return null;
+}
+
 function renderPlanApp() {
   const app = document.getElementById('planApp');
   if (!app) return;

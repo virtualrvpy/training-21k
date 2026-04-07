@@ -150,12 +150,6 @@ function groupByWeek(activities) {
   return byWeek;
 }
 
-function getWeekIndex(date) {
-  const start = new Date(2026, 2, 31); // Mar 31 2026
-  const diff = date - start;
-  return Math.floor(diff / (7 * 24 * 60 * 60 * 1000));
-}
-
 function mpsToMinKm(mps) {
   if (!mps || mps <= 0) return '—';
   const secs = 1000 / mps;

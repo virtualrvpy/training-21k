@@ -35,44 +35,6 @@ function saveAnalysisToHistory(result) {
   localStorage.setItem('coach_history', JSON.stringify(trimmed));
 }
 
-// ── Próximo entrenamiento ─────────────────────────────────────────────────────
-
-function getNextPlannedSession() {
-  const now = new Date();
-  const dayMap = { 'Mar': 2, 'Mie': 3, 'Vie': 5, 'Dom': 0 };
-  const trainingDays = [0, 2, 3, 5];
-
-  for (let i = 0; i <= 14; i++) {
-    const d = new Date(now);
-    d.setDate(d.getDate() + i);
-    const dow = d.getDay();
-    if (!trainingDays.includes(dow)) continue;
-
-    const wi = getWeekIndex(d);
-    if (wi < 0 || wi >= PLAN.length) continue;
-
-    const week = PLAN[wi];
-    // Mapear nombre del dia a numero
-    const session = week.sessions.find(s => {
-      const n = s.day === 'Mar' ? 2 : s.day === 'Mi\u00e9' ? 3 : s.day === 'Vie' ? 5 : s.day === 'Dom' ? 0 : -1;
-      return n === dow;
-    });
-    if (!session) continue;
-    if (i === 0 && now.getHours() >= 20) continue;
-
-    return {
-      ...session,
-      weekNum: week.w,
-      phase: week.phase,
-      date: d,
-      dateStr: d.toLocaleDateString('es-PY', { weekday: 'long', day: 'numeric', month: 'short' }),
-      isToday: i === 0,
-      isTomorrow: i === 1,
-    };
-  }
-  return null;
-}
-
 // ── Sesión planificada para fecha ─────────────────────────────────────────────
 
 function getPlannedSessionForDate(dateStr) {

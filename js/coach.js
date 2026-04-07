@@ -136,7 +136,6 @@ async function pollCoachResult(expectedAfter, onProgress, maxWaitMs = 60000) {
     setTimeout(check, 5000);
   });
 }
-      // stray block removed
     };
     setTimeout(check, 5000);
   });

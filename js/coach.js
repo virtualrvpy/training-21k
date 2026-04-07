@@ -137,8 +137,6 @@ async function pollCoachResult(expectedAfter, onProgress, maxWaitMs = 60000) {
   });
 }
     };
-    setTimeout(check, 5000);
-  });
 
 async function loadLatestCoachResult() {
   const RAW_URL = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/data/coach-latest.json`;

@@ -1,96 +1,72 @@
 {
   "activity": {
-    "id": 17993137197,
-    "name": "Fondo 12k con cuestas",
-    "date": "2026-04-05T19:13:16Z",
-    "distance_km": 12.01,
-    "duration": "1h 18m 25s",
-    "moving_time": "1h 18m 11s",
-    "avg_pace": "6:31",
-    "max_pace": "4:23",
-    "avg_hr": 159,
-    "max_hr": 181,
-    "hr_drift_bpm": 14,
-    "avg_cadence": 166,
-    "elevation_gain": 184,
-    "suffer_score": 121,
+    "id": 17931680839,
+    "name": "8k Easy",
+    "date": "2026-03-31T19:47:43Z",
+    "distance_km": 8.01,
+    "duration": "52m 12s",
+    "moving_time": "52m 4s",
+    "avg_pace": "6:30",
+    "max_pace": "5:03",
+    "avg_hr": 149,
+    "max_hr": 161,
+    "hr_drift_bpm": 12,
+    "avg_cadence": 169,
+    "elevation_gain": 7,
+    "suffer_score": 50,
     "splits": [
       {
         "km": 1,
-        "pace": "6:25",
-        "hr": 139,
-        "elevation": -11
+        "pace": "6:23",
+        "hr": 133,
+        "elevation": -1
       },
       {
         "km": 2,
-        "pace": "6:32",
-        "hr": 150,
-        "elevation": -5
+        "pace": "6:34",
+        "hr": 144,
+        "elevation": 1
       },
       {
         "km": 3,
-        "pace": "6:37",
-        "hr": 155,
-        "elevation": 4
+        "pace": "6:34",
+        "hr": 146,
+        "elevation": -2
       },
       {
         "km": 4,
         "pace": "6:34",
-        "hr": 157,
-        "elevation": 9
+        "hr": 150,
+        "elevation": null
       },
       {
         "km": 5,
-        "pace": "6:35",
-        "hr": 158,
-        "elevation": -8
+        "pace": "6:32",
+        "hr": 153,
+        "elevation": null
       },
       {
         "km": 6,
-        "pace": "6:47",
-        "hr": 159,
-        "elevation": -3
+        "pace": "6:32",
+        "hr": 155,
+        "elevation": -1
       },
       {
         "km": 7,
-        "pace": "6:25",
-        "hr": 163,
-        "elevation": -5
+        "pace": "6:29",
+        "hr": 156,
+        "elevation": -2
       },
       {
         "km": 8,
-        "pace": "6:47",
-        "hr": 163,
-        "elevation": 4
+        "pace": "6:23",
+        "hr": 157,
+        "elevation": 1
       },
       {
         "km": 9,
-        "pace": "6:29",
-        "hr": 164,
-        "elevation": 12
-      },
-      {
-        "km": 10,
-        "pace": "6:22",
-        "hr": 165,
-        "elevation": -12
-      },
-      {
-        "km": 11,
-        "pace": "6:28",
-        "hr": 166,
-        "elevation": -6
-      },
-      {
-        "km": 12,
-        "pace": "6:10",
-        "hr": 173,
-        "elevation": 17
-      },
-      {
-        "km": 13,
-        "pace": "7:56",
-        "hr": 172,
+        "pace": "10:54",
+        "hr": 157,
         "elevation": null
       }
     ]
@@ -98,14 +74,14 @@
   "analysis": {
     "cumplimiento": "ajuste_menor",
     "emoji": "⚠️",
-    "titulo": "Fondo con esfuerzo extra por calor y desnivel",
-    "resumen": "Rodrigo completó el fondo de 12km, pero el ritmo y la FC fueron más elevados de lo esperado para un Easy, influenciados por el desnivel y el calor extremo. El drift de FC es una señal clara de estrés térmico.",
+    "titulo": "Easy run con esfuerzo elevado",
+    "resumen": "Rodrigo, la sesión de 8km fácil estuvo un toque más rápida de lo ideal, especialmente considerando el calor. El drift de FC sugiere que el esfuerzo fue mayor de lo esperado para un rodaje fácil.",
     "detalles": [
-      "El ritmo promedio de 6:31/km estuvo ligeramente por encima del Easy (6:35/km), pero el esfuerzo real fue mayor debido a los +184m de desnivel y el calor extremo.",
-      "La FC promedio de 159 bpm (81% de la FC Max estimada) y la FC máxima de 181 bpm (93% de la FC Max) indican que la intensidad fue más cercana a un ritmo Moderado que a un Easy, superando la zona de Easy de Jack Daniels (65-79% de FC Max).",
-      "El drift de FC de +14 bpm es significativo y una clara señal de estrés cardiovascular y térmico, típico de correr en condiciones de calor y humedad extremas.",
-      "La consistencia de los splits fue aceptable, pero el último kilómetro a 6:10/km con 173 bpm fue un final demasiado fuerte para una sesión de fondo Easy, elevando innecesariamente la carga.",
-      "Considerando la penalización por calor (estimada en 15-30s/km), el esfuerzo equivalente en condiciones ideales habría sido más rápido, confirmando que la sesión fue más exigente de lo planificado para un Easy."
+      "El ritmo promedio de 6:30/km fue un poco más rápido que tu zona fácil (6:35/km), y en las condiciones de calor de Asunción, esto eleva el esfuerzo percibido.",
+      "El drift de FC de +12 bpm es un indicador claro de que tu cuerpo trabajó más de lo deseado para mantener el ritmo, probablemente por el estrés térmico. Tu FC promedio (149 bpm) estuvo en el límite superior de tu zona fácil.",
+      "Si bien los splits fueron consistentes en general, es clave recordar que en un rodaje fácil el objetivo es mantener un esfuerzo bajo y constante, no buscar un ritmo específico si las condiciones no lo permiten.",
+      "Considerando la penalización por calor (15-30s/km), un ritmo de 6:30/km en 30-38C no es un esfuerzo 'fácil'. Es fundamental priorizar la sensación y la FC para mantener la intensidad correcta.",
+      "No hay carga acumulada previa significativa de tu historial reciente que explique este esfuerzo elevado, lo que refuerza que el ritmo fue un poco ambicioso para un rodaje fácil en estas condiciones."
     ],
     "ajustes_ritmos": {
       "aplicar": false,
@@ -118,32 +94,30 @@
         "race": null
       }
     },
-    "proxima_sesion": "Para la próxima sesión Easy, enfocarse en mantener la FC en la zona Easy (65-79% de FC Max) y un ritmo conversacional, incluso si eso significa ir más lento que 6:35/km, especialmente si las condiciones de calor persisten. Priorizar la sensación y la FC sobre el ritmo objetivo.",
+    "proxima_sesion": "Para tu próxima sesión fácil, enfocate en mantener la FC en la parte baja a media de tu zona fácil (aprox. 130-145 bpm) y no te preocupes tanto por el ritmo. Si el calor es extremo, aceptá un ritmo más lento (ej. 6:45-7:00/km) para asegurar que el esfuerzo sea realmente fácil. Recordá que estamos en fase base y la prioridad es construir una base aeróbica sólida sin sobrecargar el cuerpo.",
     "fatiga": {
       "detectada": true,
       "nivel": "leve",
       "senales": [
-        "Drift de FC de +14 bpm",
-        "FC promedio elevada para un ritmo Easy",
-        "Final de sesión con ritmo y FC altos"
+        "drift_fc_elevado"
       ]
     },
-    "generado_en": "2026-04-06T15:48:47.083Z"
+    "generado_en": "2026-04-07T00:27:04.555Z"
   },
   "recent_history": [
-    {
-      "date": "2026-03-31",
-      "km": 8.01,
-      "pace": "6:30",
-      "hr": 149,
-      "name": "8k Easy"
-    },
     {
       "date": "2026-04-03",
       "km": 8.01,
       "pace": "6:03",
       "hr": 156,
       "name": "8k moderado"
+    },
+    {
+      "date": "2026-04-05",
+      "km": 12.01,
+      "pace": "6:31",
+      "hr": 159,
+      "name": "Fondo 12k con cuestas"
     }
   ],
   "plan_context": {
@@ -158,18 +132,18 @@
       "tempo": "5:15"
     },
     "plannedSession": {
-      "day": "Dom",
-      "desc": "12km largo [E]",
-      "detail": "Ritmo conversacional · hidratación c/4km",
-      "label": "Largo",
+      "day": "Mar",
+      "desc": "8km fácil [E]",
+      "detail": "10min plío: skipping A/B, saltos cajón · trote suave",
+      "label": "Fácil + Pliometría",
       "phase": "base",
-      "type": "long",
+      "type": "easy",
       "weekNote": "Construcción aeróbica",
       "weekNum": 1
     },
     "raceDate": "30 agosto 2026",
     "totalWeeks": 22,
-    "vdot": "42–43"
+    "vdot": "42-43"
   },
-  "fetched_at": "2026-04-06T15:48:47.083Z"
+  "fetched_at": "2026-04-07T00:27:04.555Z"
 }

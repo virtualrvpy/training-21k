@@ -15,12 +15,21 @@ jobs:
         with:
           node-version: '20'
       - name: Run analysis
+        id: run_analysis
+        continue-on-error: true
         env:
           GEM_API_KEY: ${{ secrets.GEM_API_KEY }}
           STRAVA_ACCESS_TOKEN: ${{ github.event.client_payload.access_token }}
           STRAVA_ACTIVITY_ID: ${{ github.event.client_payload.activity_id }}
           PLAN_CONTEXT: ${{ toJson(github.event.client_payload.plan_context) }}
         run: node scripts/analyze.js
+      - name: Write error result if analysis failed
+        if: steps.run_analysis.outcome == 'failure'
+        run: |
+          cat > data/coach-latest.json << 'ERREOF'
+          {"_error":true,"fetched_at":"TIMESTAMP","message":"El analisis fallo en el servidor. Revisa GitHub Actions para mas detalles."}
+          ERREOF
+          sed -i "s/TIMESTAMP/$(date -u +%Y-%m-%dT%H:%M:%S.000Z)/" data/coach-latest.json
       - name: Commit result
         run: |
           git config user.name "Coach Bot"

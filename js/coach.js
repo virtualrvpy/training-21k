@@ -153,9 +153,27 @@ async function pollCoachResult(expectedAfter, onProgress, maxWaitMs = 600000) {
       const elapsed = Math.round((Date.now() - start) / 1000);
       onProgress(`Analizando... ${elapsed}s`);
       if (Date.now() - start > maxWaitMs) {
-        reject(new Error('Tiempo de espera agotado. Revis\u00e1 GitHub Actions.'));
+        reject(new Error('Tiempo de espera agotado. Revisá GitHub Actions.'));
         return;
       }
+      try {
+        const res = await fetch(`${RAW_URL}?t=${Date.now()}`);
+        if (!res.ok) { setTimeout(check, interval); return; }
+        const data = await res.json();
+        if (data._error) {
+          reject(new Error(data.message || 'El análisis falló en el servidor.'));
+          return;
+        }
+        if (new Date(data.fetched_at).getTime() > expectedAfter) {
+          resolve(data);
+        } else {
+          setTimeout(check, interval);
+        }
+      } catch { setTimeout(check, interval); }
+    };
+    setTimeout(check, 5000);
+  });
+}
       try {
         const res = await fetch(`${RAW_URL}?t=${Date.now()}`);
         if (!res.ok) { setTimeout(check, interval); return; }

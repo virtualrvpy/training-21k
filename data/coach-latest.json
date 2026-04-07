@@ -96,19 +96,19 @@
     ]
   },
   "analysis": {
-    "cumplimiento": "ok",
-    "emoji": "✅",
-    "titulo": "Fondo completado con exigencia térmica",
-    "resumen": "Rodrigo, metiste los 12k en el ritmo previsto, pero el calor y las cuestas de la Costanera te subieron las pulsaciones más de lo ideal para un Easy. El esfuerzo fue sólido para la base, aunque el drift cardíaco indica que el clima y el remate final te exigieron un extra.",
+    "cumplimiento": "ajuste_menor",
+    "emoji": "⚠️",
+    "titulo": "Volumen cumplido, intensidad excedida",
+    "resumen": "Metiste los 12km a ritmo, pero el esfuerzo real fue excesivo para una sesión Easy debido a las cuestas y el calor de la Costanera. El drift de 14 bpm y el pico de 173 bpm indican que perdiste el estado conversacional en el último tercio del entrenamiento.",
     "detalles": [
-      "Ritmo de 6:31/km clavado en el rango JD, muy consistente a pesar de los +184m de desnivel acumulado.",
-      "El drift de 14 bpm es un indicador claro del impacto térmico; terminaste en zona de umbral (181 bpm) lo cual no es ideal para un Easy.",
-      "La FC promedio (159 bpm) estuvo al 80% de tu máx, un pelín alta: en Asunción con >32C, deberías correr a 6:50/km para mantenerte en zona.",
-      "Cadencia de 166 ppm: está bien, pero si buscás 170-172 vas a castigar menos las piernas en las subidas."
+      "El ritmo de 6:31/km está en zona Daniels, pero con +184m de desnivel el costo metabólico fue más parecido a un entrenamiento de fuerza-resistencia.",
+      "El drift cardíaco de +14 bpm es una señal clara de estrés térmico; con el calor de Asunción, debés priorizar la FC sobre el ritmo del reloj para no quemar etapas.",
+      "Terminaste el km 12 a 173 bpm (87% FC Max), lo cual entra en zona de Umbral y rompe el objetivo de base aeróbica y recuperación.",
+      "La cadencia de 166 es algo baja para terreno con pendientes; tratá de dar pasos más cortos y rápidos para no castigar tanto las articulaciones en las subidas."
     ],
     "ajustes_ritmos": {
       "aplicar": false,
-      "razon": null,
+      "razon": "Los ritmos JD son correctos para tu VDOT actual, pero hay que ajustarlos por sensación térmica (sumar 20-30s/km si la temperatura supera los 32C).",
       "nuevos_paces": {
         "easy": null,
         "mod": null,
@@ -117,30 +117,15 @@
         "race": null
       }
     },
-    "proxima_sesion": "8km Easy (E) regenerativo a 6:45/km, priorizando mantener la FC bajo 150 bpm.",
+    "proxima_sesion": "40 min Easy (ritmo 6:45-6:55/km) en terreno lo más llano posible + 10 min de movilidad activa.",
     "fatiga": {
       "detectada": true,
       "nivel": "leve",
-      "senales": "Drift cardíaco marcado y pico de FC alta en el último kilómetro."
+      "senales": "Drift cardíaco marcado y FC final muy cercana al umbral anaeróbico por esfuerzo en cuestas."
     },
-    "generado_en": "2026-04-07T02:23:53.758Z"
+    "generado_en": "2026-04-07T02:38:40.851Z"
   },
-  "recent_history": [
-    {
-      "date": "2026-03-31",
-      "km": 8.01,
-      "pace": "6:30",
-      "hr": 149,
-      "name": "8k Easy"
-    },
-    {
-      "date": "2026-04-03",
-      "km": 8.01,
-      "pace": "6:03",
-      "hr": 156,
-      "name": "8k moderado"
-    }
-  ],
+  "recent_history": [],
   "plan_context": {
     "currentPhase": "base",
     "currentWeek": 1,
@@ -166,5 +151,5 @@
     "totalWeeks": 22,
     "vdot": "42-43"
   },
-  "fetched_at": "2026-04-07T02:23:53.758Z"
+  "fetched_at": "2026-04-07T02:38:40.851Z"
 }

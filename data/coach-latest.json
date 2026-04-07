@@ -1,72 +1,96 @@
 {
   "activity": {
-    "id": 17968539005,
-    "name": "8k moderado",
-    "date": "2026-04-03T20:29:14Z",
-    "distance_km": 8.01,
-    "duration": "48m 38s",
-    "moving_time": "48m 29s",
-    "avg_pace": "6:03",
-    "max_pace": "4:54",
-    "avg_hr": 156,
-    "max_hr": 167,
-    "hr_drift_bpm": 12,
-    "avg_cadence": 173,
-    "elevation_gain": 8,
-    "suffer_score": 64,
+    "id": 17993137197,
+    "name": "Fondo 12k con cuestas",
+    "date": "2026-04-05T19:13:16Z",
+    "distance_km": 12.01,
+    "duration": "1h 18m 25s",
+    "moving_time": "1h 18m 11s",
+    "avg_pace": "6:31",
+    "max_pace": "4:23",
+    "avg_hr": 159,
+    "max_hr": 181,
+    "hr_drift_bpm": 14,
+    "avg_cadence": 166,
+    "elevation_gain": 184,
+    "suffer_score": 121,
     "splits": [
       {
         "km": 1,
-        "pace": "6:02",
-        "hr": 137,
-        "elevation": -1
+        "pace": "6:25",
+        "hr": 139,
+        "elevation": -11
       },
       {
         "km": 2,
-        "pace": "6:05",
-        "hr": 148,
-        "elevation": 3
+        "pace": "6:32",
+        "hr": 150,
+        "elevation": -5
       },
       {
         "km": 3,
-        "pace": "6:05",
+        "pace": "6:37",
         "hr": 155,
-        "elevation": -2
+        "elevation": 4
       },
       {
         "km": 4,
-        "pace": "6:04",
-        "hr": 158,
-        "elevation": null
+        "pace": "6:34",
+        "hr": 157,
+        "elevation": 9
       },
       {
         "km": 5,
-        "pace": "5:55",
-        "hr": 160,
-        "elevation": -1
+        "pace": "6:35",
+        "hr": 158,
+        "elevation": -8
       },
       {
         "km": 6,
-        "pace": "6:06",
-        "hr": 161,
-        "elevation": 1
+        "pace": "6:47",
+        "hr": 159,
+        "elevation": -3
       },
       {
         "km": 7,
-        "pace": "6:05",
-        "hr": 161,
-        "elevation": -1
+        "pace": "6:25",
+        "hr": 163,
+        "elevation": -5
       },
       {
         "km": 8,
-        "pace": "6:01",
+        "pace": "6:47",
         "hr": 163,
-        "elevation": 1
+        "elevation": 4
       },
       {
         "km": 9,
-        "pace": "6:32",
-        "hr": 163,
+        "pace": "6:29",
+        "hr": 164,
+        "elevation": 12
+      },
+      {
+        "km": 10,
+        "pace": "6:22",
+        "hr": 165,
+        "elevation": -12
+      },
+      {
+        "km": 11,
+        "pace": "6:28",
+        "hr": 166,
+        "elevation": -6
+      },
+      {
+        "km": 12,
+        "pace": "6:10",
+        "hr": 173,
+        "elevation": 17
+      },
+      {
+        "km": 13,
+        "pace": "7:56",
+        "hr": 172,
         "elevation": null
       }
     ]
@@ -74,13 +98,13 @@
   "analysis": {
     "cumplimiento": "ok",
     "emoji": "✅",
-    "titulo": "Ritmo clavado en la Costanera",
-    "resumen": "Metiste los 8km casi al ritmo exacto de 6:00/km, mostrando una consistencia impecable a pesar del clima de Asunción. El drift cardíaco es notable pero esperable para esta fase inicial, indicando que el cuerpo está procesando bien la carga bajo calor extremo.",
+    "titulo": "Fondo completado con exigencia térmica",
+    "resumen": "Rodrigo, metiste los 12k en el ritmo previsto, pero el calor y las cuestas de la Costanera te subieron las pulsaciones más de lo ideal para un Easy. El esfuerzo fue sólido para la base, aunque el drift cardíaco indica que el clima y el remate final te exigieron un extra.",
     "detalles": [
-      "Ritmo promedio de 6:03/km está perfecto dentro del rango Moderado (6:00/km) definido por Jack Daniels.",
-      "Consistencia de splits excelente: mantuviste el esfuerzo parejo sin quemarte al principio.",
-      "Drift de +12 bpm refleja el impacto térmico y la deshidratación; es una respuesta normal a 30-38C.",
-      "Cadencia de 173 ppm es sólida para este ritmo, lo que indica una buena eficiencia mecánica y poco 'overstriding'."
+      "Ritmo de 6:31/km clavado en el rango JD, muy consistente a pesar de los +184m de desnivel acumulado.",
+      "El drift de 14 bpm es un indicador claro del impacto térmico; terminaste en zona de umbral (181 bpm) lo cual no es ideal para un Easy.",
+      "La FC promedio (159 bpm) estuvo al 80% de tu máx, un pelín alta: en Asunción con >32C, deberías correr a 6:50/km para mantenerte en zona.",
+      "Cadencia de 166 ppm: está bien, pero si buscás 170-172 vas a castigar menos las piernas en las subidas."
     ],
     "ajustes_ritmos": {
       "aplicar": false,
@@ -93,13 +117,13 @@
         "race": null
       }
     },
-    "proxima_sesion": "8km Easy (6:35/km). Enfocate en mantener la FC controlada, sin miedo a ir más lento si el calor aprieta.",
+    "proxima_sesion": "8km Easy (E) regenerativo a 6:45/km, priorizando mantener la FC bajo 150 bpm.",
     "fatiga": {
       "detectada": true,
       "nivel": "leve",
-      "senales": "Drift cardíaco marcado y FC promedio elevada en el fondo de 12k previo."
+      "senales": "Drift cardíaco marcado y pico de FC alta en el último kilómetro."
     },
-    "generado_en": "2026-04-07T01:20:34.488Z"
+    "generado_en": "2026-04-07T02:23:53.758Z"
   },
   "recent_history": [
     {
@@ -110,11 +134,11 @@
       "name": "8k Easy"
     },
     {
-      "date": "2026-04-05",
-      "km": 12.01,
-      "pace": "6:31",
-      "hr": 159,
-      "name": "Fondo 12k con cuestas"
+      "date": "2026-04-03",
+      "km": 8.01,
+      "pace": "6:03",
+      "hr": 156,
+      "name": "8k moderado"
     }
   ],
   "plan_context": {
@@ -129,12 +153,12 @@
       "tempo": "5:15"
     },
     "plannedSession": {
-      "day": "Vie",
-      "desc": "8km moderado [M] + Fuerza B",
-      "detail": "Estocada, step-up, excéntrico talón, core — 25 min",
-      "label": "Aeróbico + Fuerza B",
+      "day": "Dom",
+      "desc": "12km largo [E]",
+      "detail": "Ritmo conversacional · hidratación c/4km",
+      "label": "Largo",
       "phase": "base",
-      "type": "easy",
+      "type": "long",
       "weekNote": "Construcción aeróbica",
       "weekNum": 1
     },
@@ -142,5 +166,5 @@
     "totalWeeks": 22,
     "vdot": "42-43"
   },
-  "fetched_at": "2026-04-07T01:20:34.488Z"
+  "fetched_at": "2026-04-07T02:23:53.758Z"
 }

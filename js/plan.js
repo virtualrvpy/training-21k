@@ -185,6 +185,7 @@ function renderPlanApp() {
   if (!app) return;
   app.innerHTML = `
     <div class="plan-page">
+      ${renderNextSessionInPlan()}
       ${renderPlanHeader()}
       ${renderZones()}
       ${renderPhaseNav()}
@@ -196,6 +197,26 @@ function renderPlanApp() {
     const el = document.querySelector(`[data-week="${w}"]`);
     if (el) el.classList.add('open');
   });
+}
+
+function renderNextSessionInPlan() {
+  if (typeof getNextPlannedSession !== 'function') return '';
+  const next = getNextPlannedSession();
+  if (!next) return '';
+  return `
+    <div class="plan-section coach-next-session">
+      <div class="section-label">Próximo entrenamiento</div>
+      <div class="next-session-card">
+        <div class="next-sess-header">
+          <span class="next-sess-when">${next.isToday ? '🟢 Hoy' : next.isTomorrow ? '🟡 Mañana' : next.dateStr}</span>
+          <span class="next-sess-type t-${next.type}">${next.label}</span>
+        </div>
+        <div class="next-sess-desc">${applyPacesToText(next.desc)}</div>
+        <div class="next-sess-detail">${next.detail}</div>
+        <div class="next-sess-meta">Semana ${next.weekNum} · ${next.phase}</div>
+      </div>
+    </div>
+  `;
 }
 
 function renderPlanHeader() {

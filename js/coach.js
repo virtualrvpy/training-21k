@@ -271,9 +271,8 @@ function renderCoachEmpty(app) {
     <div class="coach-page">
       <div class="page-header">
         <h2>COACH IA</h2>
-        <p>Analiz\u00e1 tu \u00faltima sesi\u00f3n para empezar</p>
+        <p>Analizá tu última sesión para empezar</p>
       </div>
-      ${next ? renderNextSessionCard(next) : ''}
       <div class="plan-section">
         <div class="section-label">Analizar sesi\u00f3n</div>
         ${latestRun ? `
@@ -384,8 +383,6 @@ function renderCoachDashboard(app, data, progressMsg, history) {
           ${progressMsg?`<div class="analyzing-inline"><div class="mini-spinner"></div><span>${progressMsg}</span></div>`:''}
         </div>
 
-        ${next ? renderNextSessionCard(next) : ''}
-
         <div class="coach-status plan-section">
           <div class="status-badge ${cumplimientoClass}">${a?.emoji||'\u2705'} ${a?.titulo||''}</div>
           ${fatigaHtml}
@@ -444,10 +441,8 @@ function showHistoryItem(activityId) {
 async function startAnalysis(activityId) {
   const app = document.getElementById('coachApp');
   const history = loadAnalysisHistory();
-  const prev = history[0] || null;
 
-  if (prev) renderCoachDashboard(app, prev, 'Iniciando...', history);
-  else renderCoachLoading(app, 'Iniciando...');
+  renderCoachLoading(app, 'Iniciando...');
 
   const triggeredAt = Date.now();
 
@@ -456,7 +451,8 @@ async function startAnalysis(activityId) {
     showToast('\u2713 An\u00e1lisis iniciado \u2014 ~15 segundos', 'success');
   } catch (e) {
     showToast(`Error: ${e.message}`, 'error');
-    if (prev) renderCoachDashboard(app, prev, null, history);
+    const h = loadAnalysisHistory();
+    if (h.length > 0) renderCoachDashboard(app, h[0], null, h);
     else renderCoachEmpty(app);
     return;
   }
@@ -465,9 +461,7 @@ async function startAnalysis(activityId) {
     const result = await pollCoachResult(triggeredAt, (msg) => {
       const a = document.getElementById('coachApp');
       if (!a) return;
-      const h = loadAnalysisHistory();
-      if (prev) renderCoachDashboard(a, prev, msg, h);
-      else renderCoachLoading(a, msg);
+      renderCoachLoading(a, msg);
     });
     saveAnalysisToHistory(result);
     renderCoachDashboard(app, result, null, loadAnalysisHistory());

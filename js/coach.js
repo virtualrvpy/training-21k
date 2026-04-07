@@ -252,11 +252,14 @@ function renderCoachEmpty(app) {
   const activities = ACTIVITIES_CACHE.data || [];
   const latestRun = activities[0];
 
-    app.innerHTML = `
+  app.innerHTML = `
       <div class="coach-page">
         <div class="page-header">
           <h2>COACH IA</h2>
           <p>Analizá tu última sesión para empezar</p>
+        </div>
+        <div class="coach-status" style="margin:6px 0 12px; padding:8px; border:1px solid var(--border, #2a2a2a); border-radius:6px; background: rgba(255,255,255,.04);">
+          <strong>Estado</strong>: Sin datos disponibles. Conectá Strava o genera un análisis desde Plan.
         </div>
         <div class="plan-section">
           <div class="section-label">Analizar sesi\u00f3n</div>

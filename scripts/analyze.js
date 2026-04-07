@@ -9,7 +9,7 @@ const STRAVA_ACCESS_TOKEN = process.env.STRAVA_ACCESS_TOKEN;
 const STRAVA_ACTIVITY_ID  = process.env.STRAVA_ACTIVITY_ID;
 const PLAN_CONTEXT        = JSON.parse(process.env.PLAN_CONTEXT || '{}');
 
-const GEMINI_MODEL = 'gemini-2.5-flash';
+const GEMINI_MODEL = 'gemini-3-flash-preview';
 const GEMINI_URL   = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEM_API_KEY}`;
 
 // ── Helpers ───────────────────────────────────────────────────────────────────

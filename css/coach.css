@@ -178,3 +178,58 @@
   border-radius: 6px; line-height: 1.5;
 }
 .ctx-planned strong { color: var(--text1, #f0f0f0); }
+
+/* ── Próximo entrenamiento ── */
+.coach-next-session {}
+.next-session-card {
+  background: var(--surface2, #1a1a1a);
+  border: 1px solid var(--border, #2a2a2a);
+  border-left: 3px solid #22c55e;
+  border-radius: 8px; padding: 14px;
+}
+.next-sess-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 8px;
+}
+.next-sess-when { font-size: 13px; font-weight: 700; color: #4ade80; }
+.next-sess-type {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px; letter-spacing: .5px;
+}
+.next-sess-desc { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+.next-sess-detail { font-size: 12px; color: var(--text2); line-height: 1.5; }
+.next-sess-meta {
+  margin-top: 8px; font-size: 11px; color: var(--text2);
+  text-transform: uppercase; letter-spacing: .5px;
+}
+
+/* ── Empty run card ── */
+.empty-run-card {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px;
+  background: var(--surface2, #1a1a1a);
+  border: 1px solid var(--border, #2a2a2a);
+  border-radius: 8px; gap: 12px;
+}
+.empty-run-info { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.empty-run-info strong { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.empty-run-info span { font-size: 12px; color: var(--text2); }
+
+/* ── Historial de análisis ── */
+.analysis-history { display: flex; flex-direction: column; gap: 2px; }
+.history-row {
+  display: grid; grid-template-columns: 60px 1fr 24px 48px;
+  align-items: center; gap: 8px;
+  padding: 10px 12px;
+  border-radius: 6px; cursor: pointer;
+  border: 1px solid transparent;
+  transition: background .15s;
+}
+.history-row:hover {
+  background: var(--surface2, #1a1a1a);
+  border-color: var(--border, #2a2a2a);
+}
+.hist-date { font-size: 11px; color: var(--text2); }
+.hist-name { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hist-emoji { font-size: 14px; text-align: center; }
+.hist-km { font-size: 12px; color: var(--text2); text-align: right; }

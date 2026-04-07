@@ -388,6 +388,9 @@ function renderActivityRow(act) {
         <div class="act-name">${act.name}</div>
         <div class="act-date">${date}</div>
       </div>
+      <div class="act-actions">
+        <button class="btn-coach-sm" onclick="startAnalysis('${act.id}')">Analizar</button>
+      </div>
       <div class="act-stats">
         <span class="act-km">${km} km</span>
         <span class="act-pace">${pace}/km</span>

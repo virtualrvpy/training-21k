@@ -1,114 +1,90 @@
 {
   "activity": {
-    "id": 17993137197,
-    "name": "Fondo 12k con cuestas",
-    "date": "2026-04-05T19:13:16Z",
-    "distance_km": 12.01,
-    "duration": "1h 18m 25s",
-    "moving_time": "1h 18m 11s",
-    "avg_pace": "6:31",
-    "max_pace": "4:23",
-    "avg_hr": 159,
-    "max_hr": 181,
-    "hr_drift_bpm": 14,
-    "avg_cadence": 166,
-    "elevation_gain": 184,
-    "suffer_score": 121,
+    "id": 18020691835,
+    "name": "Evening Run",
+    "date": "2026-04-07T20:31:36Z",
+    "distance_km": 8.01,
+    "duration": "51m 23s",
+    "moving_time": "51m 23s",
+    "avg_pace": "6:25",
+    "max_pace": "5:03",
+    "avg_hr": 134,
+    "max_hr": 148,
+    "hr_drift_bpm": 10,
+    "avg_cadence": 171,
+    "elevation_gain": 10,
+    "suffer_score": 13,
     "splits": [
       {
         "km": 1,
-        "pace": "6:25",
-        "hr": 139,
-        "elevation": -11
+        "pace": "6:35",
+        "hr": 127,
+        "elevation": null
       },
       {
         "km": 2,
-        "pace": "6:32",
-        "hr": 150,
-        "elevation": -5
+        "pace": "6:37",
+        "hr": 130,
+        "elevation": 2
       },
       {
         "km": 3,
-        "pace": "6:37",
-        "hr": 155,
-        "elevation": 4
-      },
-      {
-        "km": 4,
-        "pace": "6:34",
-        "hr": 157,
-        "elevation": 9
-      },
-      {
-        "km": 5,
-        "pace": "6:35",
-        "hr": 158,
-        "elevation": -8
-      },
-      {
-        "km": 6,
-        "pace": "6:47",
-        "hr": 159,
+        "pace": "6:32",
+        "hr": 131,
         "elevation": -3
       },
       {
+        "km": 4,
+        "pace": "6:31",
+        "hr": 132,
+        "elevation": 1
+      },
+      {
+        "km": 5,
+        "pace": "6:29",
+        "hr": 134,
+        "elevation": -1
+      },
+      {
+        "km": 6,
+        "pace": "6:19",
+        "hr": 140,
+        "elevation": -1
+      },
+      {
         "km": 7,
-        "pace": "6:25",
-        "hr": 163,
-        "elevation": -5
+        "pace": "6:12",
+        "hr": 141,
+        "elevation": -1
       },
       {
         "km": 8,
-        "pace": "6:47",
-        "hr": 163,
-        "elevation": 4
+        "pace": "6:06",
+        "hr": 141,
+        "elevation": null
       },
       {
         "km": 9,
-        "pace": "6:29",
-        "hr": 164,
-        "elevation": 12
-      },
-      {
-        "km": 10,
-        "pace": "6:22",
-        "hr": 165,
-        "elevation": -12
-      },
-      {
-        "km": 11,
-        "pace": "6:28",
-        "hr": 166,
-        "elevation": -6
-      },
-      {
-        "km": 12,
-        "pace": "6:10",
-        "hr": 173,
-        "elevation": 17
-      },
-      {
-        "km": 13,
-        "pace": "7:56",
-        "hr": 172,
+        "pace": "8:20",
+        "hr": 143,
         "elevation": null
       }
     ]
   },
   "analysis": {
-    "cumplimiento": "ajuste_menor",
-    "emoji": "⚠️",
-    "titulo": "Volumen cumplido, intensidad excedida",
-    "resumen": "Metiste los 12km a ritmo, pero el esfuerzo real fue excesivo para una sesión Easy debido a las cuestas y el calor de la Costanera. El drift de 14 bpm y el pico de 173 bpm indican que perdiste el estado conversacional en el último tercio del entrenamiento.",
+    "cumplimiento": "ok",
+    "emoji": "✅",
+    "titulo": "Sólido en la Costanera",
+    "resumen": "Buen laburo, Rodrigo. Cumpliste con el volumen y mantuviste el pulso bajo control, aunque te cebaste un poco al final bajando los ritmos más de lo que pedía la zona Fácil.",
     "detalles": [
-      "El ritmo de 6:31/km está en zona Daniels, pero con +184m de desnivel el costo metabólico fue más parecido a un entrenamiento de fuerza-resistencia.",
-      "El drift cardíaco de +14 bpm es una señal clara de estrés térmico; con el calor de Asunción, debés priorizar la FC sobre el ritmo del reloj para no quemar etapas.",
-      "Terminaste el km 12 a 173 bpm (87% FC Max), lo cual entra en zona de Umbral y rompe el objetivo de base aeróbica y recuperación.",
-      "La cadencia de 166 es algo baja para terreno con pendientes; tratá de dar pasos más cortos y rápidos para no castigar tanto las articulaciones en las subidas."
+      "Ritmo promedio de 6:25/km, un pelín más rápido que el objetivo de 6:35/km.",
+      "Drift cardíaco de +10 bpm muy bien gestionado para el calor y la humedad de Asunción.",
+      "Los últimos 3km (6:19 a 6:06) se metieron en zona Moderada; ojo con respetar la zona E para recuperar.",
+      "Cadencia de 171 ppm es correcta, mantené esa eficiencia en los rodajes largos."
     ],
     "ajustes_ritmos": {
       "aplicar": false,
-      "razon": "Los ritmos JD son correctos para tu VDOT actual, pero hay que ajustarlos por sensación térmica (sumar 20-30s/km si la temperatura supera los 32C).",
+      "razon": null,
       "nuevos_paces": {
         "easy": null,
         "mod": null,
@@ -117,18 +93,18 @@
         "race": null
       }
     },
-    "proxima_sesion": "40 min Easy (ritmo 6:45-6:55/km) en terreno lo más llano posible + 10 min de movilidad activa.",
+    "proxima_sesion": "Mañana miércoles toca calidad. Respetá los descansos y no salgas a morir en el primer intervalo.",
     "fatiga": {
-      "detectada": true,
-      "nivel": "leve",
-      "senales": "Drift cardíaco marcado y FC final muy cercana al umbral anaeróbico por esfuerzo en cuestas."
+      "detectada": false,
+      "nivel": null,
+      "senales": null
     },
-    "generado_en": "2026-04-07T02:38:40.851Z"
+    "generado_en": "2026-04-08T00:34:19.096Z"
   },
   "recent_history": [],
   "plan_context": {
     "currentPhase": "base",
-    "currentWeek": 1,
+    "currentWeek": 2,
     "intermediateRace": "5 julio 2026",
     "paces": {
       "easy": "6:35",
@@ -138,18 +114,18 @@
       "tempo": "5:15"
     },
     "plannedSession": {
-      "day": "Dom",
-      "desc": "12km largo [E]",
-      "detail": "Ritmo conversacional · hidratación c/4km",
-      "label": "Largo",
+      "day": "Mar",
+      "desc": "8km fácil [E] + 10min plío",
+      "detail": "Skipping A/B, saltos cajón 3×8",
+      "label": "Fácil + Pliometría",
       "phase": "base",
-      "type": "long",
+      "type": "easy",
       "weekNote": "Construcción aeróbica",
-      "weekNum": 1
+      "weekNum": 2
     },
     "raceDate": "30 agosto 2026",
     "totalWeeks": 22,
     "vdot": "42-43"
   },
-  "fetched_at": "2026-04-07T02:38:40.851Z"
+  "fetched_at": "2026-04-08T00:34:19.096Z"
 }

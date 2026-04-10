@@ -1,1 +1,113 @@
-{"_error":true,"fetched_at":"2026-04-08T00:36:18.000Z","message":"El analisis fallo en el servidor. Revisa GitHub Actions para mas detalles."}
+{
+  "activity": {
+    "id": 18034390766,
+    "name": "Evening Run",
+    "date": "2026-04-08T19:59:58Z",
+    "distance_km": 5.01,
+    "duration": "36m 1s",
+    "moving_time": "31m 34s",
+    "avg_pace": "6:18",
+    "max_pace": "4:10",
+    "avg_hr": 132,
+    "max_hr": 148,
+    "hr_drift_bpm": 14,
+    "avg_cadence": 171,
+    "elevation_gain": 6,
+    "suffer_score": 8,
+    "splits": [
+      {
+        "km": 1,
+        "pace": "6:32",
+        "hr": 125,
+        "elevation": 1
+      },
+      {
+        "km": 2,
+        "pace": "6:31",
+        "hr": 126,
+        "elevation": -2
+      },
+      {
+        "km": 3,
+        "pace": "6:28",
+        "hr": 131,
+        "elevation": 1
+      },
+      {
+        "km": 4,
+        "pace": "6:09",
+        "hr": 135,
+        "elevation": -1
+      },
+      {
+        "km": 5,
+        "pace": "5:53",
+        "hr": 143,
+        "elevation": null
+      },
+      {
+        "km": 6,
+        "pace": "9:59",
+        "hr": 146,
+        "elevation": null
+      }
+    ]
+  },
+  "analysis": {
+    "cumplimiento": "ok",
+    "emoji": "✅",
+    "titulo": "Rodaje aeróbico controlado",
+    "resumen": "Completaste el opcional post-fuerza manteniendo un esfuerzo cardiovascular muy bajo, lo cual es ideal para esta fase de base. Si bien terminaste los últimos dos kilómetros por encima del ritmo Easy estipulado, tu frecuencia cardíaca se mantuvo en rangos de total seguridad.",
+    "detalles": [
+      "Ritmo promedio de 6:18/km, algo más rápido que el objetivo de 6:35/km, pero validado por una FC media de solo 132 bpm.",
+      "Drift de 14 bpm detectado: es un valor alto para solo 5km, reflejando el impacto térmico de la Costanera o la aceleración del final.",
+      "Cadencia de 171 ppm muy estable, indicando buena eficiencia mecánica incluso después del trabajo de fuerza.",
+      "Los splits 4 y 5 (6:09 y 5:53) entraron en zona Moderada; tratá de no cebarte en los días de recuperación."
+    ],
+    "ajustes_ritmos": {
+      "aplicar": false,
+      "razon": null,
+      "nuevos_paces": {
+        "easy": null,
+        "mod": null,
+        "tempo": null,
+        "interval": null,
+        "race": null
+      }
+    },
+    "proxima_sesion": "Rodaje de 8-10km manteniendo ritmo Easy (6:35) estricto para gestionar la fatiga acumulada.",
+    "fatiga": {
+      "detectada": false,
+      "nivel": null,
+      "senales": null
+    },
+    "generado_en": "2026-04-10T23:27:16.845Z"
+  },
+  "recent_history": [],
+  "plan_context": {
+    "currentPhase": "base",
+    "currentWeek": 2,
+    "intermediateRace": "5 julio 2026",
+    "paces": {
+      "easy": "6:35",
+      "interval": "4:50",
+      "mod": "6:00",
+      "race": "5:40",
+      "tempo": "5:15"
+    },
+    "plannedSession": {
+      "day": "Mié",
+      "desc": "Fuerza A + 5km fácil opcional",
+      "detail": "Prioridad fuerza si hay fatiga",
+      "label": "Fuerza A",
+      "phase": "base",
+      "type": "strength",
+      "weekNote": "Construcción aeróbica",
+      "weekNum": 2
+    },
+    "raceDate": "30 agosto 2026",
+    "totalWeeks": 22,
+    "vdot": "42-43"
+  },
+  "fetched_at": "2026-04-10T23:27:16.845Z"
+}

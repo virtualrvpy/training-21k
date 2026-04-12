@@ -1,72 +1,96 @@
 {
   "activity": {
-    "id": 18034390766,
-    "name": "Evening Run",
-    "date": "2026-04-08T19:59:58Z",
-    "distance_km": 5.01,
-    "duration": "36m 1s",
-    "moving_time": "31m 34s",
-    "avg_pace": "6:18",
-    "max_pace": "4:10",
-    "avg_hr": 132,
-    "max_hr": 148,
-    "hr_drift_bpm": 14,
-    "avg_cadence": 171,
-    "elevation_gain": 6,
-    "suffer_score": 8,
+    "id": 18077556446,
+    "name": "5dias RUN \"10K\"",
+    "date": "2026-04-12T07:02:40Z",
+    "distance_km": 9.04,
+    "duration": "48m 18s",
+    "moving_time": "48m 12s",
+    "avg_pace": "5:20",
+    "max_pace": "3:42",
+    "avg_hr": 176,
+    "max_hr": 187,
+    "hr_drift_bpm": 12,
+    "avg_cadence": 175,
+    "elevation_gain": 48,
+    "suffer_score": 142,
     "splits": [
       {
         "km": 1,
-        "pace": "6:32",
-        "hr": 125,
-        "elevation": 1
+        "pace": "5:42",
+        "hr": 162,
+        "elevation": 11
       },
       {
         "km": 2,
-        "pace": "6:31",
-        "hr": 126,
-        "elevation": -2
+        "pace": "5:29",
+        "hr": 167,
+        "elevation": -7
       },
       {
         "km": 3,
-        "pace": "6:28",
-        "hr": 131,
-        "elevation": 1
+        "pace": "5:15",
+        "hr": 171,
+        "elevation": -14
       },
       {
         "km": 4,
-        "pace": "6:09",
-        "hr": 135,
-        "elevation": -1
+        "pace": "5:27",
+        "hr": 175,
+        "elevation": 6
       },
       {
         "km": 5,
-        "pace": "5:53",
-        "hr": 143,
-        "elevation": null
+        "pace": "5:23",
+        "hr": 179,
+        "elevation": 9
       },
       {
         "km": 6,
-        "pace": "9:59",
-        "hr": 146,
+        "pace": "5:11",
+        "hr": 180,
+        "elevation": -13
+      },
+      {
+        "km": 7,
+        "pace": "5:10",
+        "hr": 182,
+        "elevation": -7
+      },
+      {
+        "km": 8,
+        "pace": "5:18",
+        "hr": 183,
+        "elevation": 3
+      },
+      {
+        "km": 9,
+        "pace": "5:11",
+        "hr": 185,
+        "elevation": null
+      },
+      {
+        "km": 10,
+        "pace": "4:32",
+        "hr": 185,
         "elevation": null
       }
     ]
   },
   "analysis": {
-    "cumplimiento": "ok",
-    "emoji": "✅",
-    "titulo": "Rodaje aeróbico controlado",
-    "resumen": "Completaste el opcional post-fuerza manteniendo un esfuerzo cardiovascular muy bajo, lo cual es ideal para esta fase de base. Si bien terminaste los últimos dos kilómetros por encima del ritmo Easy estipulado, tu frecuencia cardíaca se mantuvo en rangos de total seguridad.",
+    "cumplimiento": "revision_necesaria",
+    "emoji": "🔴",
+    "titulo": "Te pasaste de rosca mal, Rodri",
+    "resumen": "Corriste 9km a ritmo de tu PR de 10K en pleno calor paraguayo cuando el plan pedía un trote cómodo de base. Por esta intensidad excesiva, el cuerpo te pasó factura y no pudiste completar los 14km previstos.",
     "detalles": [
-      "Ritmo promedio de 6:18/km, algo más rápido que el objetivo de 6:35/km, pero validado por una FC media de solo 132 bpm.",
-      "Drift de 14 bpm detectado: es un valor alto para solo 5km, reflejando el impacto térmico de la Costanera o la aceleración del final.",
-      "Cadencia de 171 ppm muy estable, indicando buena eficiencia mecánica incluso después del trabajo de fuerza.",
-      "Los splits 4 y 5 (6:09 y 5:53) entraron en zona Moderada; tratá de no cebarte en los días de recuperación."
+      "El ritmo promedio de 5:20/km es 1:15 min/km más rápido que tu zona Fácil (6:35), transformando un fondo aeróbico en una carrera de umbral.",
+      "La FC promedio de 176 bpm (casi 90% de tu máx) indica un estrés cardiovascular altísimo, nada que ver con una fase de base.",
+      "El drift de +12 bpm y el recorte de 5km de la sesión son señales claras de que el calor y el ritmo te liquidaron antes de tiempo.",
+      "Correr a ritmo de competencia en entrenamientos diarios solo te va a llevar a una lesión o a un estancamiento prematuro."
     ],
     "ajustes_ritmos": {
       "aplicar": false,
-      "razon": null,
+      "razon": "Tus zonas de Daniels están bien, el problema es de disciplina en la ejecución y falta de ajuste subjetivo por calor.",
       "nuevos_paces": {
         "easy": null,
         "mod": null,
@@ -75,13 +99,14 @@
         "race": null
       }
     },
-    "proxima_sesion": "Rodaje de 8-10km manteniendo ritmo Easy (6:35) estricto para gestionar la fatiga acumulada.",
+    "proxima_sesion": "40 min de trote regenerativo MUY suave (ritmo >7:00/km) para limpiar las piernas. No pases de 145 bpm.",
     "fatiga": {
-      "detectada": false,
-      "nivel": null,
-      "senales": null
+      "detectada": true,
+      "nivel": "alta",
+      "senales": "FC promedio desproporcionada, drift marcado y abandono de la sesión por agotamiento."
     },
-    "generado_en": "2026-04-10T23:27:16.845Z"
+    "generado_at": "2024-05-22T14:35:00Z",
+    "generado_en": "2026-04-12T19:59:38.650Z"
   },
   "recent_history": [],
   "plan_context": {
@@ -96,12 +121,12 @@
       "tempo": "5:15"
     },
     "plannedSession": {
-      "day": "Mié",
-      "desc": "Fuerza A + 5km fácil opcional",
-      "detail": "Prioridad fuerza si hay fatiga",
-      "label": "Fuerza A",
+      "day": "Dom",
+      "desc": "14km largo [E]",
+      "detail": "Últimos 2km a [M] si te sentís bien",
+      "label": "Largo",
       "phase": "base",
-      "type": "strength",
+      "type": "long",
       "weekNote": "Construcción aeróbica",
       "weekNum": 2
     },
@@ -109,5 +134,5 @@
     "totalWeeks": 22,
     "vdot": "42-43"
   },
-  "fetched_at": "2026-04-10T23:27:16.845Z"
+  "fetched_at": "2026-04-12T19:59:38.650Z"
 }
